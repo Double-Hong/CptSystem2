@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.LinkedList;
-import java.util.Objects;
 import java.util.Queue;
 import java.util.Random;
 
@@ -172,7 +171,7 @@ class Cpu extends JPanel {
         Font f = new Font("仿宋", Font.BOLD, 30);
         label.setFont(f);
 //        label.setForeground(new Color(0xFFFFFF));//设置字体颜色
-        label.setBounds(108, 20, 100, 35);
+//        label.setBounds(108, 20, 100, 35);
         add(label);
     }
 }
@@ -205,21 +204,6 @@ class myThread1 extends Thread {
             cenpanel.label[0].setLocation(x1, 165);
         } else {
             Flag = 0;
-//            if (Cpu.Flag == 0) {
-//                Cpu.Flag = 1;
-//                cenPanel.flag1 = 1;
-//            }
-//            if (cenPanel.flag1 == 1) {
-//                if (cenPanel.g1 < 1085) {
-//                    x1 = x1 + 3;
-//                    cenPanel.g1 = cenPanel.g1 + 3;
-//                    cenpanel.label[0].setLocation(x1, 165);
-////                    cenpanel.g.fillOval(cenPanel.g1, 200, 65, 65);
-//                } else {
-//                    Cpu.Flag = 0;
-//                    cenPanel.flag1 = 0;
-//                }
-//            }
             CpuThread.queue.add(1);
             CpuThread.flag = 1;
         }
@@ -243,21 +227,6 @@ class myThread2 extends Thread {
             cenpanel.label[1].setLocation(x2, 315);
         } else {
             Flag = 0;
-//            if (Cpu.Flag == 0) {
-//                Cpu.Flag = 1;
-//                cenPanel.flag2 = 1;
-//            }
-//            if (cenPanel.flag2 == 1) {
-//                if (cenPanel.g2 < 1085) {
-//                    x2 = x2 + 3;
-//                    cenPanel.g2 = cenPanel.g2 + 3;
-//                    cenpanel.label[1].setLocation(x2, 315);
-//                    cenpanel.g.fillOval(cenPanel.g2, 350, 65, 65);
-//                } else {
-//                    Cpu.Flag = 0;
-//                    cenPanel.flag2 = 0;
-//                }
-//            }
             CpuThread.queue.add(2);
             CpuThread.flag = 1;
         }
@@ -281,21 +250,6 @@ class myThread3 extends Thread {
             cenpanel.label[2].setLocation(x3, 465);
         } else {
             Flag = 0;
-//            if (Cpu.Flag == 0) {
-//                Cpu.Flag = 1;
-//                cenPanel.flag3 = 1;
-//            }
-//            if (cenPanel.flag3 == 1) {
-//                if (cenPanel.g3 < 1085) {
-//                    x3 = x3 + 3;
-//                    cenPanel.g3 = cenPanel.g3 + 3;
-//                    cenpanel.label[2].setLocation(x3, 465);
-//                    cenpanel.g.fillOval(cenPanel.g3, 500, 65, 65);
-//                } else {
-//                    Cpu.Flag = 0;
-//                    cenPanel.flag3 = 0;
-//                }
-//            }
             CpuThread.queue.add(3);
             CpuThread.flag = 1;
         }
@@ -320,21 +274,6 @@ class myThread4 extends Thread {
             cenpanel.label[3].setLocation(x4, 615);
         } else {
             Flag = 0;
-//            if (Cpu.Flag == 0) {
-//                Cpu.Flag = 1;
-//                cenPanel.flag4 = 1;
-//            }
-//            if (cenPanel.flag4 == 1) {
-//                if (cenPanel.g4 < 1085) {
-//                    x4 = x4 + 3;
-//                    cenPanel.g4 = cenPanel.g4 + 3;
-//                    cenpanel.label[3].setLocation(x4, 615);
-//                    cenpanel.g.fillOval(cenPanel.g4, 650, 65, 65);
-//                } else {
-//                    Cpu.Flag = 0;
-//                    cenPanel.flag4 = 0;
-//                }
-//            }
             CpuThread.queue.add(4);
             CpuThread.flag = 1;
         }
